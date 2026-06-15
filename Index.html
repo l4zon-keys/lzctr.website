@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>lazCouture</h1>
+    </header>
+    <main>
+        <Section class="hero"> 
+            <video autoplay muted loop playsinline> 
+                <source src="Videos\hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+
+    <h2>For Members Only</h2>
+    <p>Become a member and receive a password for early access.</p>
+
+    <label>
+        <input type="radio" name="access" value="email" onclick="showEmail()">
+        Email Access
+    </label>
+
+    <label>
+        <input type="radio" name="access" value="sms" onclick="showPhone()">
+        SMS Access
+    </label>
+
+    <div id="email-container" style="display: none;">
+        <input type="email" placeholder="Enter your email">
+    </div>
+
+    <div id="phone-container" style="display: none;">
+        <input type="tel" placeholder="Enter your phone number">
+    </div>
+
+    <button onclick="submitForm()">Get Access</button>
+
+    <p id="message"></p>
+
+</div>
+</Section>
+
+    </main>
+ <footer>
+    <p>Instagram: @lazcouture.imperial</p>
+    <p>TikTok: @LazCouture</p>
+    <p>&copy; 2026 LazCouture Imperial. All rights reserved.</p>
+</footer>
+<script>
+async function submitForm() {
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyehL35t9pv1FVQtriL3V1ubxE-hxR7UbzYf4u2wkFvJrv4EYXtBGV-4BYW-HEdHCGp/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            email: email,
+            phone: phone
+        })
+    });
+
+    document.getElementById("message").innerText =
+        "You're on the list. Check your inbox.";
+}
+</script>
+</body>
+</html>
