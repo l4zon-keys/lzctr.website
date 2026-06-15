@@ -22,4 +22,4 @@ To get a local copy of this project up and running, follow these simple steps: t
 
 This project is proprietary and confidential. Unauthorized copying, modification, or distribution of this software via any medium is strictly prohibited. 
 
-Copyright © 2026 **SULLEN**. All rights reserved.
+Copyright © 2026 **LazCouture**. All rights reserved.
